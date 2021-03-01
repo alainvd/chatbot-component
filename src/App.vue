@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="https://source.unsplash.com/ohBhECoxQoU/400x250">
-    <HelloWorld msg="Welcome to Legeek.be"/>
+    <HelloWorld msg="Welcome to Chatbot Component"/>
   </div>
 </template>
 
