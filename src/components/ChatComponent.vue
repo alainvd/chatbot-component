@@ -27,10 +27,12 @@
 
 //import Chat from 'vue-beautiful-chat'
 
-import Chat from '../beautiful';
+//import Chat from '../beautiful';
 
-Vue.use(Chat);
+//Vue.use(Chat);
 
+import axios from 'axios'
+import _ from 'lodash';
 
 export default {
   props: {
@@ -218,9 +220,9 @@ export default {
     },
     trimWebLinks: function (content) {
       return content;
-      var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-      var element_content = content.replace(exp_match, "<a href='$1'>LINK</a>");
-      return element_content;
+      //var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+      //var element_content = content.replace(exp_match, "<a href='$1'>LINK</a>");
+      //return element_content;
 
     },
     getPrimaryIntent: function (response) {
