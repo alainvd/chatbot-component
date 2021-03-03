@@ -113,7 +113,7 @@ export default {
 
     if (this.env === "codeweek") {
       this.title = "Codeweek Bot";
-      this.url = "http://3.123.123.117:5005/webhooks/rest/webhook"
+
     }
 
     if (this.env === "emff") {
@@ -167,23 +167,13 @@ export default {
 
       const payload = {
         message: '/general_hello',
-        sender: 111222
+        env: this.env,
+        lang: this.lang
       };
 
-     /* axios
-          .post(this.url, payload, {
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept' : 'application/json'
-            }
-          })
+      axios
+          .post('https://chatbot.cnect.eu/rasa', payload)
           .then(this.getF());
-*/
-      const json = JSON.stringify(payload);
-      const res = axios.post(this.url, payload).then(function(result){
-        console.log(result.data.data);
-      });
-
 
       /*axios
           .post('rasa', payload)
@@ -213,9 +203,9 @@ export default {
         lang: this.lang
       };
 
-    /*  axios
-          .post('rasa', payload)
-          .then(this.getF())*/
+      axios
+          .post('https://chatbot.cnect.eu/rasa', payload)
+          .then(this.getF())
 
     },
     loopThroughArray(array) {
