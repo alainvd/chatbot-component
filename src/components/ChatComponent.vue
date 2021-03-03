@@ -91,7 +91,8 @@ export default {
       messageStyling: true, // enables *bold* /emph/ _underline_ and such (more info at github.com/mattezza/msgdown)
       title: "EC Bot",
       suggestions: [],
-      placeholder: 'Ask a question'
+      placeholder: 'Ask a question',
+      url: ""
 
     }
   },
@@ -112,6 +113,7 @@ export default {
 
     if (this.env === "codeweek") {
       this.title = "Codeweek Bot";
+      this.url = "http://3.123.123.117:5005/webhooks/rest/webhook"
     }
 
     if (this.env === "emff") {
@@ -165,14 +167,28 @@ export default {
 
       const payload = {
         message: '/general_hello',
-        env: this.env,
-        lang: this.lang
+        sender: 111222
       };
 
-      axios
+     /* axios
+          .post(this.url, payload, {
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept' : 'application/json'
+            }
+          })
+          .then(this.getF());
+*/
+      const json = JSON.stringify(payload);
+      const res = axios.post(this.url, payload).then(function(result){
+        console.log(result.data.data);
+      });
+
+
+      /*axios
           .post('rasa', payload)
           .then(this.getF());
-
+*/
 
       setTimeout(() => {
         this.newMessagesCount = this.isChatOpen ? this.newMessagesCount : this.newMessagesCount + 1;
@@ -197,9 +213,9 @@ export default {
         lang: this.lang
       };
 
-      axios
+    /*  axios
           .post('rasa', payload)
-          .then(this.getF())
+          .then(this.getF())*/
 
     },
     loopThroughArray(array) {
@@ -287,7 +303,7 @@ export default {
       return messages;
     }, getF: function () {
       return response => {
-
+console.log(response);
         let messages;
         messages = this.getPrimaryIntent(response);
 

@@ -1,25 +1,26 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="https://source.unsplash.com/ohBhECoxQoU/400x250">
-    <HelloWorld msg="Welcome to Chatbot Component"/>
+
     <chat-component :env="'codeweek'"></chat-component>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
 import ChatComponent from "@/components/ChatComponent";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+  //  HelloWorld,
     ChatComponent
   }
 }
 </script>
 
 <style>
+@import './assets/css/app.css';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
