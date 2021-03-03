@@ -5,7 +5,7 @@
         {{newMessagesCount}}
       </div>
       <img class="sc-open-icon" src="https://chatbot.cnect.eu/images/close-icon.png" />
-      <img class="sc-closed-icon" src="https://chatbot.cnect.eu/images/assets/logo-no-bg.svg" />
+      <img class="sc-closed-icon" src="https://chatbot.cnect.eu/images/logo-no-bg.svg" />
     </div>
     <ChatWindow
       :messageList="messageList"
