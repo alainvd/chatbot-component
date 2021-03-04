@@ -25,12 +25,6 @@
 
 <script>
 
-//import Chat from 'vue-beautiful-chat'
-
-//import Chat from '../beautiful';
-
-//Vue.use(Chat);
-
 import axios from 'axios'
 import _ from 'lodash';
 

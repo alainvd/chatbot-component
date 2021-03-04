@@ -8,6 +8,9 @@ import VueMarkdown from 'vue-markdown'
 import Chat from './beautiful';
 
 import VueSession from 'vue-session'
+
+import './assets/css/app.css';
+
 var options = {
     persist: true
 }
@@ -24,6 +27,8 @@ Vue.config.productionTip = false
 
 Vue.use(vueCustomElement);
 
-Vue.customElement('doris-chatbot', App);
+Vue.customElement('doris-chatbot', App, {
+    shadow: false
+});
 
 
