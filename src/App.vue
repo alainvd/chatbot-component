@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Embed image" src="https://source.unsplash.com/ohBhECoxQoU/400x250">
     <chat-component :env="environment"></chat-component>
   </div>
 </template>
