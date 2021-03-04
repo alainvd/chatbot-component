@@ -251,7 +251,7 @@ export default {
 
         if (i.hasOwnProperty('custom')) {
 
-          console.log(i.custom.qaContexts[0].geo[0]);
+          //console.log(i.custom.qaContexts[0].geo[0]);
 
           if (i.custom.qaContexts[0].geo[0]) {
             messages = [];
@@ -300,7 +300,7 @@ export default {
       return messages;
     }, getF: function () {
       return response => {
-console.log(response);
+
         let messages;
         messages = this.getPrimaryIntent(response);
 
