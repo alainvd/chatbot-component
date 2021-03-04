@@ -87,9 +87,9 @@ export default {
       suggestions: [],
       placeholder: 'Ask a question',
       url: "",
-      //endpoint: "https://chatbot.cnect.eu/rasa",
+      endpoint: "https://chatbot.cnect.eu/rasa",
       //endpoint: "http://chatbot.test/rasa",
-      endpoint: ""
+      //endpoint: ""
 
     }
   },
@@ -100,42 +100,34 @@ export default {
 
     if (this.env === "dev") {
       this.title = "EC Bot [DEV]";
-      this.endpoint = "https://3.120.125.59:5005/webhooks/rest/webhook"
-
     }
 
     if (this.env === "dsm") {
       this.title = "DSM Bot";
-      this.endpoint = "https://15.237.67.89:5005/webhooks/rest/webhook"
 
     }
 
     if (this.env === "h2020") {
       this.title = "EC Bot [H2020]";
-      this.endpoint = "https://18.195.194.95:5005/webhooks/rest/webhook"
     }
 
     if (this.env === "staffmatters") {
       this.title = "Staff Matters Bot";
-      this.endpoint = "https://35.181.164.230:5005/webhooks/rest/webhook"
     }
 
     if (this.env === "codeweek") {
       this.title = "Codeweek Bot";
-      this.endpoint = "https://3.123.123.117:5005/webhooks/rest/webhook"
 
     }
 
     if (this.env === "emff") {
       this.title = "EMFF Bot";
-      this.endpoint = "https://ec2-15-188-254-19.eu-west-3.compute.amazonaws.com:5005/webhooks/rest/webhook"
     }
 
 
 
     if (this.env === "codeweek") {
       this.title = "Ally";
-      this.endpoint = "https://3.123.123.117:5005/webhooks/rest/webhook"
       this.placeholder= 'Write a question'
 
       this.titleImageUrl = 'https://codeweek-s3.s3-eu-west-1.amazonaws.com/chatbot/ally.png',
