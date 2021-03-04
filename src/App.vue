@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="https://source.unsplash.com/ohBhECoxQoU/400x250">
-
-    <chat-component :env="'codeweek'"></chat-component>
+    <img alt="Embed image" src="https://source.unsplash.com/ohBhECoxQoU/400x250">
+    <chat-component :env="environment"></chat-component>
   </div>
 </template>
 
@@ -12,8 +11,8 @@ import ChatComponent from "@/components/ChatComponent";
 
 export default {
   name: 'App',
+  props: ['environment'],
   components: {
-  //  HelloWorld,
     ChatComponent
   }
 }

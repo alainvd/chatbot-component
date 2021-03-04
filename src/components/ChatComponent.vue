@@ -92,11 +92,16 @@ export default {
       title: "EC Bot",
       suggestions: [],
       placeholder: 'Ask a question',
-      url: ""
+      url: "",
+      endpoint: "https://chatbot.cnect.eu/rasa",
+      //endpoint: "http://chatbot.test/rasa",
 
     }
   },
   mounted: function () {
+
+    this.$session.start();
+
 
     if (this.env === "dev") {
       this.title = "EC Bot [DEV]";
@@ -168,11 +173,12 @@ export default {
       const payload = {
         message: '/general_hello',
         env: this.env,
-        lang: this.lang
+        lang: this.lang,
+        session: this.$session.id()
       };
 
       axios
-          .post('https://chatbot.cnect.eu/rasa', payload)
+          .post(this.endpoint, payload)
           .then(this.getF());
 
       /*axios
@@ -200,11 +206,12 @@ export default {
       const payload = {
         message: message.data.text,
         env: this.env,
-        lang: this.lang
+        lang: this.lang,
+        session: this.$session.id()
       };
 
       axios
-          .post('https://chatbot.cnect.eu/rasa', payload)
+          .post(this.endpoint, payload)
           .then(this.getF())
 
     },
