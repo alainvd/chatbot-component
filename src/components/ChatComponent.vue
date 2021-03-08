@@ -87,8 +87,10 @@ export default {
       suggestions: [],
       placeholder: 'Ask a question',
       url: "",
+      //endpoint: "https://chatbot-h2020.cnect.eu/",
+      //endpoint: "https://chatbot-emff.cnect.eu",
       endpoint: "https://chatbot.cnect.eu/rasa",
-      //endpoint: "http://chatbot.test/rasa",
+
       //endpoint: ""
 
     }
@@ -109,6 +111,7 @@ export default {
 
     if (this.env === "h2020") {
       this.title = "EC Bot [H2020]";
+      this.endpoint = "https://chatbot-h2020.cnect.eu/";
     }
 
     if (this.env === "staffmatters") {
