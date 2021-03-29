@@ -105,7 +105,7 @@ export default {
     }
 
     if (this.env === "dsm") {
-      this.title = "DSM Bot";
+      this.title = "DigiBot";
       this.titleImageUrl = "https://chatbot-cnect.s3.eu-central-1.amazonaws.com/avatars/chatbot-dsm-icon.png";
       this.participants = [
 
