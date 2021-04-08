@@ -106,13 +106,13 @@ export default {
 
     if (this.env === "dsm") {
       this.title = "DigiBot";
-      this.titleImageUrl = "https://chatbot-cnect.s3.eu-central-1.amazonaws.com/avatars/chatbot-dsm-icon.png";
+      this.titleImageUrl = "https://chatbot-cnect.s3.eu-central-1.amazonaws.com/avatars/chatbot-dsm.jpg";
       this.participants = [
 
         {
           id: 'rasa-ui',
           name: 'DMS',
-          imageUrl: 'https://chatbot-cnect.s3.eu-central-1.amazonaws.com/avatars/chatbot-dsm-icon.png'
+          imageUrl: 'https://chatbot-cnect.s3.eu-central-1.amazonaws.com/avatars/chatbot-dsm.jpg'
         }
 
       ];
