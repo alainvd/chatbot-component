@@ -105,8 +105,17 @@ export default {
     }
 
     if (this.env === "dsm") {
-      this.title = "DSM Bot";
+      this.title = "DigiBot";
+      this.titleImageUrl = "https://chatbot-cnect.s3.eu-central-1.amazonaws.com/avatars/chatbot-dsm-icon.png";
+      this.participants = [
 
+        {
+          id: 'rasa-ui',
+          name: 'DMS',
+          imageUrl: 'https://chatbot-cnect.s3.eu-central-1.amazonaws.com/avatars/chatbot-dsm-icon.png'
+        }
+
+      ];
     }
 
     if (this.env === "h2020") {
@@ -118,18 +127,14 @@ export default {
       this.title = "Staff Matters Bot";
     }
 
-    if (this.env === "codeweek") {
-      this.title = "Codeweek Bot";
-
-    }
 
     if (this.env === "emff") {
       this.title = "EMFF Bot";
+      this.endpoint =  "https://chatbot-emff.cnect.eu/";
     }
 
-
-
     if (this.env === "codeweek") {
+      this.endpoint =  "https://chatbot-codeweek.cnect.eu/",
       this.title = "Ally";
       this.placeholder= 'Write a question'
 
