@@ -161,8 +161,8 @@ export default {
   position: fixed;
   right: 25px;
   bottom: 25px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 2px #ffffff;
+  border-radius: 100%;
+  box-shadow: 0 0 0 2px #ffffff;
   transition: box-shadow 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -214,8 +214,7 @@ export default {
 }
 
 .sc-launcher:hover {
-
-  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.4);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
 }
 
 .sc-new-messsages-count {
